@@ -1,0 +1,21 @@
+{
+  "name": "infinite-scroll",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "preact": "^10.11.2",
+    "react-icons": "^4.6.0"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.4.0",
+    "@types/react": "^18.0.24",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.0"
+  }
+}

@@ -1,0 +1,149 @@
+* {
+  --btn-color: rgb(123, 0, 255);
+  --theme-color: rgb(104, 19, 195);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(179, 182, 210);
+  height: 100vh;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  transition: all 0.2s;
+  background: var(--theme-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+nav .title {
+  color: white;
+  font-size: larger;
+}
+
+.auth {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.auth form {
+  padding: 5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.auth form .title {
+  padding: 1rem;
+  margin: auto;
+  font-weight: bold;
+  font-size: x-large;
+  color: var(--theme-color);
+}
+.auth form input[type=text],
+.auth form input[type=password] {
+  padding: 0.5rem;
+  width: min(90vw, 50vh);
+  border: none;
+  border-bottom: 1px solid;
+  outline: 1px;
+}
+.auth form .actions {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.auth form .actions button {
+  padding: 0.5rem 1.5rem;
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  border-radius: 5px;
+  border: 2px solid var(--btn-color);
+}
+.auth form .actions button[type=submit] {
+  background: var(--btn-color);
+  color: white;
+}
+.auth form .actions button[type=reset] {
+  color: var(--btn-color);
+  background: transparent;
+}
+
+button.logout {
+  cursor: pointer;
+  color: white;
+  background: var(--btn-color);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  background: rgba(255, 255, 255, 0.1254901961);
+  margin: 1rem auto;
+  width: min(60rem, 95%);
+  box-shadow: 0 1px 2px;
+  display: flex;
+  flex-direction: column;
+}
+.item .left img {
+  width: 100%;
+}
+.item .right {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.item .right .title {
+  font-weight: bold;
+}
+@media screen and (min-width: 480px) {
+  .item {
+    flex-direction: row;
+  }
+  .item .left {
+    max-height: 100%;
+    width: unset;
+  }
+}
+
+.spinner {
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.spinner > * {
+  margin: 5rem 0;
+  -webkit-animation: rotate linear infinite 0.8s;
+          animation: rotate linear infinite 0.8s;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=app.css.map */

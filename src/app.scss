@@ -1,0 +1,136 @@
+* {
+  --btn-color: rgb(123, 0, 255);
+  --theme-color: rgb(104, 19, 195);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(179, 182, 210);
+  height: 100vh;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  transition: all 0.2s;
+  background: var(--theme-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  .title {
+    color: white;
+    font-size: larger;
+  }
+}
+
+.auth {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  form {
+    .title{
+      padding: 1rem;
+      margin: auto;
+      font-weight: bold;
+      font-size: x-large;
+      color: var(--theme-color)
+    }
+    padding: 5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    input[type="text"],
+    input[type="password"] {
+      padding: 0.5rem;
+      width: min(90vw, 50vh);
+      border: none;
+      border-bottom: 1px solid;
+      outline: 1px;
+    }
+    .actions {
+      margin-top: 1rem;
+      width: 100%;
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      button {
+        padding: 0.5rem 1.5rem;
+        max-width: min-content;
+        border-radius: 5px;
+        border: 2px solid var(--btn-color);
+
+        &[type="submit"] {
+          background: var(--btn-color);
+          color: white;
+        }
+
+        &[type="reset"] {
+          color: var(--btn-color);
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+button.logout {
+  cursor: pointer;
+  color: white;
+  background: var(--btn-color);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.item {
+  background: #ffffff20;
+  margin: 1rem auto;
+  width: calc(min(60rem, 95%));
+  box-shadow: 0 1px 2px;
+  display: flex;
+  flex-direction: column;
+  .left {
+    img {
+      width: 100%;
+    }
+  }
+  .right {
+    padding: 1rem;
+    .title {
+      font-weight: bold;
+    }
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 480px) {
+    flex-direction: row;
+    .left{
+      max-height: 100%;
+      width: unset;
+    }
+  }
+}
+
+.spinner {
+  margin: auto;
+  width: fit-content;
+  > * {
+    margin: 5rem 0;
+    animation: rotate linear infinite 0.8s;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
