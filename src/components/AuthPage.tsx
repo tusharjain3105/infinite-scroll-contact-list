@@ -6,7 +6,8 @@ const AuthPage = () => {
   const ref = useRef<HTMLFormElement>();
   const onSubmit = async (e: TargetedEvent) => {
     e.preventDefault();
-    login(ref.current?.username, ref.current?.password);
+    login(ref.current?.username, ref.current?.password, ref.current?.rememberMe.checked);
+    
   };
 
   history.replaceState(null, null, "/");
